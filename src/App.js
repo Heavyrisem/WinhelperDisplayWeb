@@ -11,7 +11,7 @@ export default class App extends React.Component {
     document.getElementById('introduce').addEventListener('scroll', () => {
       console.log("scroll");
       if (this.autoscroll) clearTimeout(this.autoscroll);
-      this.autoscroll = setTimeout(this.scrollNext, 6500);
+      this.autoscroll = setTimeout(this.scrollNext, 1000);
     })
   }
 
