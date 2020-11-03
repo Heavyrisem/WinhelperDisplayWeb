@@ -11,7 +11,7 @@ export default class App extends React.Component {
     document.getElementById('introduce').addEventListener('scroll', () => {
       console.log("scroll");
       if (this.autoscroll) clearTimeout(this.autoscroll);
-      this.autoscroll = setTimeout(this.scrollNext, 8000);
+      this.autoscroll = setTimeout(this.scrollNext, 6500);
     })
   }
 
@@ -21,9 +21,9 @@ export default class App extends React.Component {
     if (a.scrollTop == a.scrollHeight - window.innerHeight)
       a.scrollTo({top: 0, behavior: 'smooth'});
     else
-      a.scrollTo({top: a.scrollTop+parseInt(a.scrollHeight*10/100), behavior: 'smooth'});
+      a.scrollTo({top: a.scrollTop+parseInt(a.scrollHeight*30/100), behavior: 'smooth'});
   }
-  
+
   render() {
     return (
 
@@ -32,7 +32,7 @@ export default class App extends React.Component {
         <div className="introduce" id="introduce">
           
           <div className="scrollarea">
-            <div className="title">제목</div>
+            <div className="title">번역 및 추가 기능 프로그램</div>
             <div className="my_name">표인수</div>
           </div>
 
