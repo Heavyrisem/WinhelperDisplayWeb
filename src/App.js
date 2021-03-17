@@ -2,7 +2,6 @@ import './App.css';
 import runimg from './runimg.png';
 import helpimg from './help.png';
 import encimg from './encimg.png';
-import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 
 export default class App extends React.Component {
@@ -11,7 +10,7 @@ export default class App extends React.Component {
     document.getElementById('introduce').addEventListener('scroll', () => {
       console.log("scroll");
       if (this.autoscroll) clearTimeout(this.autoscroll);
-      this.autoscroll = setTimeout(this.scrollNext, 1000);
+      this.autoscroll = setTimeout(this.scrollNext, 6500);
     })
   }
 
@@ -32,27 +31,27 @@ export default class App extends React.Component {
         <div className="introduce" id="introduce">
           
           <div className="scrollarea">
-            <div className="title">번역 및 추가 기능 프로그램</div>
-            <div className="my_name">표인수</div>
+            <div className="title">Translater</div>
+            <div className="my_name">Pyo Insu</div>
           </div>
 
           <div className="scrollarea">
-            <div className="title">사용 방법</div>
-            <div className="desc">컨트롤 + 탭 키를 동시에 누릅니다</div>
+            <div className="title">Usage</div>
+            <div className="desc">Press Ctrl + Tab at the same time</div>
             <img src={runimg}></img>
           </div>
 
           <div className="scrollarea">
-            <div className="title">명령어 입력 방법</div>
-            <div className="desc">도움말을 입력하고 엔터를 누르면 사용 가능한 명령어들이 표시됩니다.</div>
+            <div className="title">To enter a command</div>
+            <div className="desc">Enter Help and press Enter to display the available commands.</div>
             <img src={helpimg}></img>
           </div>
 
           <div className="scrollarea">
-            <div className="title">예시 명령어</div>
-            <div className="desc">백과사전 덕영고등학교</div>
+            <div className="title">Example commands</div>
+            <div className="desc">Encyclopedia Deogyeong High School</div>
             <img src={encimg}></img>
-            <div className="desc"><span className="H">검색 결과 클릭시</span> 자세한 내용을 보여주는 페이지로 이동합니다.</div>
+            <div className="desc"><span className="H">Click</span> on the search results to go to the page that shows more details.</div>
           </div>
 
         </div>
